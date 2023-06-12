@@ -1,0 +1,15 @@
+<!-- templates/home.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>All Blog Posts</h2>
+    {% for blog_post in blog_posts %}
+        <div class="card">
+            <img src="{% static 'images/image1.jpg' %}">
+            <h2>{{ blog_post.title }}</h2>
+            <p>{{ blog_post.content }}</p>
+            <a href="{% url 'detail' blog_post.id %}" class="read-more">Read More</a>
+        </div>
+    {% endfor %}
+{% endblock %}

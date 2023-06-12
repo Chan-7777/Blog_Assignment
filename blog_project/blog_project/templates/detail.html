@@ -1,0 +1,12 @@
+<!-- templates/detail.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{{ blog_post.title }}</h2>
+    <p>{{ blog_post.content }}</p>
+    <p>Author: {{ blog_post.author }}</p>
+    <p>Created at: {{ blog_post.created_at }}</p>
+    <p>Updated at: {{ blog_post.updated_at }}</p>
+{% endblock %}
+
